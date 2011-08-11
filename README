@@ -1,0 +1,12 @@
+PROJECT EULER SOLUTIONS FILES
+
+Documents my foray into mathematical programming in python.
+
+It's mildly embarassing to go back and see completely unpythonic code at the beginning,
+and even more embarassing to see the recent completely unpythonic code.
+
+I feel it is in the spirit of Project Euler to have answers available on Github; if
+you do decided to use my answers to "cheat" and answer questions that you don't
+actually know how to answer, the only person that you've really cheated is yourself.
+
+Most everything is in Python, and some of the commenting is pretty bad.
