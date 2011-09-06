@@ -63,6 +63,13 @@ def ispalindrome(x):
     s=str(x)
     check=[c for c in s.lower()]
     return (check==check[::-1])
+def sumofpower(x,y):
+    ''' For each digit in x, raises to the power of y and sums them '''
+    s=str(x)
+    sum=0
+    for c in s:
+        sum+=(int(c))**y
+    return sum
 def ispandigital(x,n):
     ''' Checks to see if x uses all digits 1 .. n exactly once '''
     if n>9 or n<1:
