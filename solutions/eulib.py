@@ -219,7 +219,12 @@ def champernowne(n):
     for num in xrange(n):
         file_str.write(`num`)
     return file_str.getvalue()
-        
+
+
+def mostCommon(lst):
+    '''This will return the most common element of a list. May not be
+    computationally optimal.'''
+    return max(((item, lst.count(item)) for item in set(lst)), key=lambda a: a[1])[0]
 
 
 
