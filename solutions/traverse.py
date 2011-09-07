@@ -1,4 +1,7 @@
-"""A traversal library for stepping through files and stuff."""
+"""A library for stepping through triangles of the form found in
+the Project Euler questions 18 and 67. There is no error catching
+so awesome things might happen if you do this on a file that does
+not match the preapproved setup."""
 
 
 __author__ = "Andrew Phoenix"
