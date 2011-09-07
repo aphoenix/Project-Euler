@@ -1,4 +1,4 @@
-"""This is Problem 1 of ProjectEuler
+"""This is Problem 20 of ProjectEuler
 
 Find the sum of the digits in the number 100!"""
 
