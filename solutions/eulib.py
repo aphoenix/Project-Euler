@@ -34,7 +34,7 @@ def ackermod(i,j,mod):
 def dectobin(n):
     ''' convert decimal integer n to binary string bStr '''
     bStr = ''
-    if n < 1:  
+    if n < 1:
         return '0'
     while n > 0:
         bStr = str(n % 2) + bStr
@@ -42,15 +42,15 @@ def dectobin(n):
     return bStr
 def sieve(end):
     '''Using the sieve of aristhothenes to find all primes up to a given number (end) '''
-    if end < 2: return []  
-    lng = ((end/2)-1+end%2)  
-    sieve = [True]*(lng+1)  
-    for i in range(int(end**0.5) >> 1):  
-        if not sieve[i]: continue  
-        for j in range( (i*(i + 3) << 1) + 3, lng, (i << 1) + 3):  
-            sieve[j] = False  
-    primes = [2]  
-    primes.extend([(i << 1) + 3 for i in range(lng) if sieve[i]])  
+    if end < 2: return []
+    lng = ((end/2)-1+end%2)
+    sieve = [True]*(lng+1)
+    for i in range(int(end**0.5) >> 1):
+        if not sieve[i]: continue
+        for j in range( (i*(i + 3) << 1) + 3, lng, (i << 1) + 3):
+            sieve[j] = False
+    primes = [2]
+    primes.extend([(i << 1) + 3 for i in range(lng) if sieve[i]])
     return primes
 def isprime(n):
     ''' Check if integer n is, in fact, prime '''
@@ -90,15 +90,15 @@ def mul(A, B):
     return a*d + b*e, a*e + b*f, b*e + c*f
 def pow(A, n):
     ''' Step 2 in a fast Fibonacci generator fib(n)'''
-    if n == 1:     
+    if n == 1:
         return A
-    if n & 1 == 0: 
+    if n & 1 == 0:
         return pow(mul(A, A), n//2)
-    else:          
+    else:
         return mul(A, pow(mul(A, A), (n-1)//2))
 def fib(n):
     ''' Generates the Nth fibonacci number.'''
-    if n < 2: 
+    if n < 2:
         return n
     return pow((1,1,0), n-1)[0]
 def genhex(x):
@@ -124,15 +124,15 @@ def istri(x):
     g=math.floor(f)
     if f-g==0:
         return True
-    else: 
+    else:
         return False
-def hcf(x,y):  
+def hcf(x,y):
     ''' Find the Highest Common Factor of X and Y using Euclid's Algorithm'''
-    while x!=y:  
-        if x>y:  
-            x-=y  
-        elif y>x:  
-            y-=x  
+    while x!=y:
+        if x>y:
+            x-=y
+        elif y>x:
+            y-=x
     return x
 def rpfgen(d):
     ''' Will find the Reduced Proper Fractions between 0 and 1 for a denominator depth of d'''
@@ -195,12 +195,12 @@ def divisors(n):
     factors = (itertools.izip(primes, e) for e in exponents if sum(e) >= 2)
     divisors = [reduce(operator.mul, (p ** e for p, e in f)) for f in factors]
     divisors.extend(primes)
-    divisors.append(1) 
+    divisors.append(1)
     return divisors
 def naivechampernowne(n):
     '''This builds the Champernowne Constant to the xth term.
     The higher (x) is the more accurate the constant will be.
-    Note that this puts together three lengthy summations that are 
+    Note that this puts together three lengthy summations that are
     broken down in previous functions.
     '''
     x = 0
@@ -226,8 +226,10 @@ def mostCommon(lst):
     computationally optimal.'''
     return max(((item, lst.count(item)) for item in set(lst)), key=lambda a: a[1])[0]
 
-
+def isSquare(n):
+    #Two conditions for better handling round-off errors
+    if math.sqrt(n)==math.sqrt(n)//1 and (int(math.sqrt(n))**2==n):
+        return True
 
 if __name__=="__main__":
     print 'This is just a library. You probably want to help(eulib) if you want to see what it can do. And you probably want to include it in something else.'
-
