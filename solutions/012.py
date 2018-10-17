@@ -13,8 +13,9 @@ import eulib
 
 '''the first number with 500 divisors is 62370000 a triangular number near there is tri(3531)'''
 
-x=3531
+x = 3531
 
-while len(eulib.divisors(eulib.gentri(x)))<500:
-    x=x+1
-print eulib.gentri(x)
+while len(eulib.divisors(eulib.gentri(x))) < 500:
+    x = x + 1
+print
+eulib.gentri(x)

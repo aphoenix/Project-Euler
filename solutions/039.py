@@ -14,26 +14,24 @@ list of triples and see what the most common sum of the triples are.
 
 """
 
-
-__author__="Andrew Phoenix"
-
+__author__ = "Andrew Phoenix"
 
 import eulib
 
-
-f=open('resources/triples.txt', 'r')
-thesums=[]
+f = open('resources/triples.txt', 'r')
+thesums = []
 for line in f:
-    thisrow=line.split(',')
-    onesum=(int(thisrow[0])+int(thisrow[1])+int(thisrow[2]))
-    i=1
-    total=onesum
-    while (total<1000):
-        total=onesum*i
+    thisrow = line.split(',')
+    onesum = (int(thisrow[0]) + int(thisrow[1]) + int(thisrow[2]))
+    i = 1
+    total = onesum
+    while (total < 1000):
+        total = onesum * i
         thesums.append(total)
-        i=i+1
+        i = i + 1
 
-
-answer=eulib.mostCommon(thesums)
-print thesums
-print answer
+answer = eulib.mostCommon(thesums)
+print
+thesums
+print
+answer

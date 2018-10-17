@@ -9,14 +9,15 @@ Find the pair of pentagonal numbers, Pj and Pk, for which their sum and differen
 __author__ = "Andrew Phoenix"
 
 import math
+
 import eulib
 
-top=2167
+top = 2167
 
-for x in range (1,top):
-  for y in range (x,top):
-    if eulib.ispent(math.fabs(eulib.genpent(y)-eulib.genpent(x))):
-      if eulib.ispent((eulib.genpent(y)+eulib.genpent(x))):
-        print x, eulib.genpent(x), y, eulib.genpent(y), eulib.genpent(y)-eulib.genpent(x) 
-        break
-
+for x in range(1, top):
+    for y in range(x, top):
+        if eulib.ispent(math.fabs(eulib.genpent(y) - eulib.genpent(x))):
+            if eulib.ispent((eulib.genpent(y) + eulib.genpent(x))):
+                print
+                x, eulib.genpent(x), y, eulib.genpent(y), eulib.genpent(y) - eulib.genpent(x)
+                break

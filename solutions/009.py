@@ -15,5 +15,5 @@ __author__ = "Andrew Phoenix"
 # find the roots: a=200 b=375
 # then c = 425
 
-print 200*375*425
-  
+print
+200 * 375 * 425

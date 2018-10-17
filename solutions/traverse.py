@@ -3,11 +3,7 @@ the Project Euler questions 18 and 67. There is no error catching
 so awesome things might happen if you do this on a file that does
 not match the preapproved setup."""
 
-
 __author__ = "Andrew Phoenix"
-
-
-import math
 
 
 def triangle(filename):
@@ -24,16 +20,18 @@ def triangle(filename):
             maxi = cur
         else:
             maxi = []
-            maxi.append(int(total[0])+int(cur[0]))
-            for n in range(1, row-1):
-                if (int(total[n])>int(total[n-1])):
-                    maxi.append(int(cur[n])+int(total[n]))
+            maxi.append(int(total[0]) + int(cur[0]))
+            for n in range(1, row - 1):
+                if (int(total[n]) > int(total[n - 1])):
+                    maxi.append(int(cur[n]) + int(total[n]))
                 else:
-                    maxi.append(int(cur[n])+int(total[n-1]))
-            maxi.append(int(cur[row-1])+int(total[row-2]))
+                    maxi.append(int(cur[n]) + int(total[n - 1]))
+            maxi.append(int(cur[row - 1]) + int(total[row - 2]))
         total = maxi
-    print max(total)
-        
+    print
+    max(total)
 
-if __name__=="__main__":
-    print 'This is a library. Just include it, or use help(traverse)'
+
+if __name__ == "__main__":
+    print
+    'This is a library. Just include it, or use help(traverse)'

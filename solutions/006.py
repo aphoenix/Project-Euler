@@ -4,12 +4,13 @@ Find the difference between the sum of the squares of the first one hundred natu
 
 __author__ = "Andrew Phoenix"
 
-sum1=0
-sum2=0
-for x in range (1,101):
-  sum1=sum1+x**2
+sum1 = 0
+sum2 = 0
+for x in range(1, 101):
+    sum1 = sum1 + x ** 2
 
-for x in range (1,101):
-  sum2=sum2+x
+for x in range(1, 101):
+    sum2 = sum2 + x
 
-print sum1-sum2**2
+print
+sum1 - sum2 ** 2

@@ -11,18 +11,18 @@ Find the next triangle number that is also pentagonal and hexagonal."""
 
 __author__ = "Andrew Phoenix"
 
-import math
 import eulib
 
-#This Method was intended to search along the line of hex numbers
-#and break out when it found something that was also a tri and a
-#pent. I think it's a little processor crazy.
+# This Method was intended to search along the line of hex numbers
+# and break out when it found something that was also a tri and a
+# pent. I think it's a little processor crazy.
 
-for x in range (144,1000000):
-  H=eulib.genhex(x)
-  print H,
-  if eulib.ispent(H)==True:
-    if eulib.istri(H)==True:
-      print H, 'is the answer. It is H of', x
-      break
-
+for x in range(144, 1000000):
+    H = eulib.genhex(x)
+    print
+    H,
+    if eulib.ispent(H) == True:
+        if eulib.istri(H) == True:
+            print
+            H, 'is the answer. It is H of', x
+            break

@@ -4,6 +4,3 @@
 
 __author__ = "Andrew Phoenix"
 
-import itertools
-
-

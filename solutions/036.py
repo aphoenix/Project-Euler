@@ -6,9 +6,10 @@ __author__ = "Andrew Phoenix"
 
 import eulib
 
-sum=0
-for n in range (0,1000000):
+sum = 0
+for n in range(0, 1000000):
     if eulib.ispalindrome(n):
         if eulib.ispalindrome(eulib.dectobin(n)):
-            sum=sum+n
-            print sum
+            sum = sum + n
+            print
+            sum
